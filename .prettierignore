@@ -7,3 +7,4 @@ stories
 tsconfig.json
 package.json
 package-lock.json
+tsconfig.tsbuildinfo
