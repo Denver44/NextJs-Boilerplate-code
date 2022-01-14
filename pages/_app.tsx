@@ -7,7 +7,7 @@ import { wrapper } from '../redux/store';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from '../styles/globals/manifest';
 import { theme } from '../styles/theme';
-// import 'tailwindcss/tailwind.css';
+import 'tailwindcss/tailwind.css';
 // import Cookies from 'universal-cookie';
 // import { API } from '../libs/helpers';
 
