@@ -4,10 +4,11 @@ import Head from 'next/head';
 import React from 'react';
 import { LayoutContextProvider } from '../context/LayoutContext';
 import { wrapper } from '../redux/store';
-import { ThemeProvider } from 'styled-components';
+import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider } from '@mui/material/styles';
 import GlobalStyle from '../styles/globals/manifest';
-import { theme } from '../styles/theme';
-// import 'tailwindcss/tailwind.css';
+import theme from '../styles/theme';
+
 // import Cookies from 'universal-cookie';
 // import { API } from '../libs/helpers';
 
@@ -19,41 +20,40 @@ const MyApp = ({ Component, pageProps }: AppProps | any) => {
 
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <Head>
-          <meta charSet="utf-8" />
-          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-          <meta
-            name="viewport"
-            content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
-          />
-          <meta name="description" content="Description" />
-          <meta name="keywords" content="Keywords" />
-          <title>NextJs Boilerplate</title>
+      <Head>
+        <meta charSet="utf-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+          name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+        />
+        <meta name="description" content="Description" />
+        <meta name="keywords" content="Keywords" />
+        <title>NextJs Boilerplate</title>
 
-          <link rel="manifest" href="/manifest.json" />
-          <link
-            href="/icons/favicon.png"
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-          />
-          <link
-            href="/icons/favicon.png"
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-          />
-          <link rel="apple-touch-icon" href="/apple-icon.png"></link>
-          <meta name="theme-color" content="#317EFB" />
-        </Head>
+        <link rel="manifest" href="/manifest.json" />
+        <link
+          href="/icons/favicon.png"
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+        />
+        <link
+          href="/icons/favicon.png"
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+        />
+        <link rel="apple-touch-icon" href="/apple-icon.png"></link>
+        <meta name="theme-color" content="#317EFB" />
+      </Head>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
         <LayoutContextProvider>
           <GlobalStyle />
-          {/* <LayoutComponent layout={pageProps.layout}> */}
           <Layout>
             <Component {...pageProps} />
           </Layout>
-          {/* </LayoutComponent> */}
         </LayoutContextProvider>
       </ThemeProvider>
     </>
