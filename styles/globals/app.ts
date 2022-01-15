@@ -5,3 +5,6 @@ import { css } from 'styled-components';
 // -------------------------------------------------------------
 
 export default css``;
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;

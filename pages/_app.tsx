@@ -8,6 +8,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import GlobalStyle from '../styles/globals/manifest';
 import theme from '../styles/theme';
+import 'tailwindcss/tailwind.css';
 
 // import Cookies from 'universal-cookie';
 // import { API } from '../libs/helpers';
